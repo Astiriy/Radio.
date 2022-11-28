@@ -146,5 +146,4 @@ public class RadioTest {
         Assertions.assertEquals(0, rad.getMinChannel());
         Assertions.assertEquals(9, rad.getMaxChannel());
     }
-
 }
