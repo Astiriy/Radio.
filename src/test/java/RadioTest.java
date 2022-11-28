@@ -59,7 +59,7 @@ public class RadioTest {
     public void nextChannel() {
         Radio rad = new Radio();
 
-        rad.channel = 8;
+        rad.setChannel(8);
         rad.nextChannel();
 
         int expected = 9;
@@ -72,7 +72,7 @@ public class RadioTest {
     public void nextAfter9Channel() {
         Radio rad = new Radio();
 
-        rad.channel = 9;
+        rad.setChannel(9);
         rad.nextChannel();
 
         int expected = 0;
@@ -85,7 +85,7 @@ public class RadioTest {
     public void prevChannel() {
         Radio rad = new Radio();
 
-        rad.channel = 9;
+        rad.setChannel(9);
         rad.prevChannel();
 
         int expected = 8;
@@ -98,7 +98,7 @@ public class RadioTest {
     public void nextAfter0Channel() {
         Radio rad = new Radio();
 
-        rad.channel = 0;
+        rad.setChannel(0);
         rad.prevChannel();
 
         int expected = 9;
@@ -130,4 +130,21 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void SizeChannel() {
+        Radio rad = new Radio(10);
+
+        Assertions.assertEquals(0, rad.getMinChannel());
+        Assertions.assertEquals(9, rad.getMaxChannel());
+    }
+
+    @Test
+    public void MinAndMaxChannel() {
+        Radio rad = new Radio();
+
+        Assertions.assertEquals(0, rad.getMinChannel());
+        Assertions.assertEquals(9, rad.getMaxChannel());
+    }
+
 }
