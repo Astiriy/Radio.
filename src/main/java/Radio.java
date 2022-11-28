@@ -1,27 +1,18 @@
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Radio {
-    public int currentVolume;
 
+    public int currentVolume;
     private int maxChannel = 9;
     private int minChannel = 0;
     private int channel = minChannel;
 
     public Radio(int size) {
         maxChannel = minChannel + size - 1;
-    }
-
-    public Radio() {
-    }
-
-    public int getChannel() {
-        return channel;
-    }
-
-    public int getMaxChannel() {
-        return maxChannel;
-    }
-
-    public int getMinChannel() {
-        return minChannel;
     }
 
     public void setChannel(int newChannel) {
