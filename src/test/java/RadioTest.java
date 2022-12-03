@@ -134,54 +134,6 @@ public class RadioTest {
     }
 
     @Test
-    public void maxSetChannel() {
-        Radio rad = new Radio();
-
-        rad.setChannel(10);
-
-        int expected = 0;
-        int actual = rad.getChannel();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void minSetChannel() {
-        Radio rad = new Radio();
-
-        rad.setChannel(-1);
-
-        int expected = 0;
-        int actual = rad.getChannel();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void maxSetVolume() {
-        Radio rad = new Radio();
-
-        rad.setCurrentVolume(11);
-
-        int expected = 0;
-        int actual = rad.getChannel();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void minSetVolume() {
-        Radio rad = new Radio();
-
-        rad.setCurrentVolume(-1);
-
-        int expected = 0;
-        int actual = rad.getChannel();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
     public void SizeChannel() {
         Radio rad = new Radio(10);
 
