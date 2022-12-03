@@ -1,6 +1,23 @@
 public class Radio {
-    private int currentVolume;
-    private int channel;
+    public int currentVolume;
+    private int maxChannel = 9;
+    private int minChannel = 0;
+    private int channel = minChannel;
+
+    public Radio(int size) {
+        maxChannel = minChannel + size - 1;
+    }
+
+    public int getMaxChannel() {
+        return maxChannel;
+    }
+
+    public int getMinChannel() {
+        return minChannel;
+    }
+
+    public Radio() {
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
